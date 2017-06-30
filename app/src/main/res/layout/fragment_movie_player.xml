@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.websarva.wings.android.movieplayersample.MoviePlayerFragment">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/control_bar_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.4"
+        />
+    <LinearLayout
+        android:id="@+id/control_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="再生" />
+
+        <Button
+            android:id="@+id/button_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="連続"
+            />
+
+        <TextView
+            android:id="@+id/left_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0:00"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="90" />
+        <TextView
+            android:id="@+id/right_time_text"
+            android:text="0:00"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
